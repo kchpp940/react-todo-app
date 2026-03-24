@@ -1,0 +1,91 @@
+.task-form {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-main {
+  margin-bottom: 16px;
+}
+
+.task-input {
+  flex: 1;
+}
+
+.add-btn {
+  flex-shrink: 0;
+}
+
+.form-options {
+  flex-wrap: wrap;
+}
+
+.form-field {
+  flex: 1;
+  min-width: 150px;
+}
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 6px;
+}
+
+.form-input,
+.form-select,
+.form-date {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-date:focus {
+  outline: none;
+  border-color: #2b946c;
+  box-shadow: 0 0 0 3px rgba(43, 148, 108, 0.1);
+}
+
+.form-input::placeholder {
+  color: #adb5bd;
+}
+
+.form-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 6px;
+  color: #856404;
+  font-size: 14px;
+}
+
+.error-icon {
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .form-main {
+    flex-direction: column;
+  }
+  
+  .add-btn {
+    width: 100%;
+  }
+}

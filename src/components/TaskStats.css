@@ -1,0 +1,50 @@
+.task-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-item {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 16px 12px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-2px);
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2b946c;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #6c757d;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.stat-pending .stat-value {
+  color: #fd7e14;
+}
+
+.stat-completed .stat-value {
+  color: #28a745;
+}
+
+.stat-rate .stat-value {
+  color: #6f42c1;
+}
+
+@media (max-width: 600px) {
+  .task-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

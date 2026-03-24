@@ -1,0 +1,159 @@
+.task-item {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.task-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #dee2e6;
+}
+
+.task-completed {
+  background: #f8f9fa;
+  opacity: 0.8;
+}
+
+.task-completed .task-text {
+  text-decoration: line-through;
+  color: #868e96;
+}
+
+.task-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.task-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #212529;
+  word-break: break-word;
+}
+
+.task-category {
+  font-size: 12px;
+  padding: 3px 10px;
+  background: #e9ecef;
+  border-radius: 20px;
+  color: #495057;
+  white-space: nowrap;
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.task-due-date {
+  font-size: 13px;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.due-date-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.due-overdue .due-date-badge {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.due-today .due-date-badge {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.due-upcoming .due-date-badge {
+  background: #d4edda;
+  color: #155724;
+}
+
+.due-overdue {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.due-today {
+  color: #fd7e14;
+  font-weight: 500;
+}
+
+.due-upcoming {
+  color: #28a745;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.task-item-editing {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.task-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.task-edit-input,
+.task-edit-select,
+.task-edit-date {
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.task-edit-input:focus,
+.task-edit-select:focus,
+.task-edit-date:focus {
+  outline: none;
+  border-color: #2b946c;
+}
+
+.task-edit-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 600px) {
+  .task-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .task-actions {
+    margin-left: 0;
+    margin-top: 12px;
+    justify-content: flex-end;
+  }
+}
